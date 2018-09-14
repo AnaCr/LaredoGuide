@@ -3,16 +3,15 @@ package com.example.acruz.laredoguide;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.Serializable;
 
-public class Item implements Parcelable{
+public class Item implements Parcelable {
 
-    public static final Parcelable.Creator CREATOR = new Parcelable.Creator(){
-        public Item createFromParcel(Parcel in){
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
+        public Item createFromParcel(Parcel in) {
             return new Item(in);
         }
 
-        public Item[] newArray(int size){
+        public Item[] newArray(int size) {
             return new Item[size];
         }
     };
@@ -25,7 +24,7 @@ public class Item implements Parcelable{
 
     // Item website
     private String mItemWebsite = NO_WEBSITE_PROVIDED;
-    private static final String NO_WEBSITE_PROVIDED = "no website";
+    static final String NO_WEBSITE_PROVIDED = "no website";
 
     //Item Address
     private String mItemAddress;
@@ -33,14 +32,15 @@ public class Item implements Parcelable{
     //Item Phone number
     private String mItemPhone;
 
-    /** Constructor 1
+    /**
+     * Constructor 1
      * Create a new Item object.
      *
-     * @param itemName is the name of the item
+     * @param itemName       is the name of the item
      * @param itemDrawableId is the id of the corresponding drawable
-     * @param itemAddress is the address of the item
-     * @param itemWebsite is the item website
-     * @param itemPhone is the phone number
+     * @param itemAddress    is the address of the item
+     * @param itemWebsite    is the item website
+     * @param itemPhone      is the phone number
      */
     public Item(String itemName, int itemDrawableId, String itemWebsite,
                 String itemAddress, String itemPhone) {
@@ -52,13 +52,14 @@ public class Item implements Parcelable{
 
     }
 
-    /** Constructor 2 - no website
+    /**
+     * Constructor 2 - no website
      * Create a new Item object.
      *
-     * @param itemName is the name of the item
+     * @param itemName       is the name of the item
      * @param itemDrawableId is the id of the corresponding drawable
-     * @param itemAddress is the address of the item
-     * @param itemPhone is the phone number
+     * @param itemAddress    is the address of the item
+     * @param itemPhone      is the phone number
      */
     public Item(String itemName, int itemDrawableId,
                 String itemAddress, String itemPhone) {
@@ -68,7 +69,6 @@ public class Item implements Parcelable{
         mItemPhone = itemPhone;
 
     }
-
 
     // get the item's name
     public String getmItemName() {
@@ -95,13 +95,8 @@ public class Item implements Parcelable{
         return mItemPhone;
     }
 
-    // returns whether a website was provided
-    public boolean hasWebsite() {
-        return mItemWebsite != NO_WEBSITE_PROVIDED;
-    }
-
     //Parcelling
-    public Item(Parcel in){
+    public Item(Parcel in) {
         this.mItemName = in.readString();
         this.mItemDrawableId = in.readInt();
         this.mItemWebsite = in.readString();
@@ -110,12 +105,12 @@ public class Item implements Parcelable{
     }
 
     @Override
-    public int describeContents(){
+    public int describeContents() {
         return 0;
     }
 
     @Override
-    public void writeToParcel (Parcel dest, int flags){
+    public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.mItemName);
         dest.writeInt(this.mItemDrawableId);
         dest.writeString(this.mItemWebsite);

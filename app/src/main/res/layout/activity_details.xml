@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:padding="@dimen/padding_large"
     tools:context=".DetailsActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/attraction_image_view"

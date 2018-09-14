@@ -1,9 +1,9 @@
 package com.example.acruz.laredoguide;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,12 +12,9 @@ import android.widget.TextView;
 public class DetailsActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-
-        //Get the selected Item
-        Item selectedItem = getIntent().getParcelableExtra("selectedItem");
 
         //find views by id
         ImageView attractionImage = findViewById(R.id.attraction_image_view);
@@ -26,24 +23,26 @@ public class DetailsActivity extends AppCompatActivity {
         TextView attractionAddress = findViewById(R.id.address);
         TextView attractionPhone = findViewById(R.id.phone);
 
+        //Get the selected Item
+        Item selectedItem = getIntent().getParcelableExtra("selectedItem");
+
         // set the details for selected Item
+        //Image
         attractionImage.setImageResource(selectedItem.getmItemDrawableId());
+        //Name
         attractionName.setText(selectedItem.getmItemName());
-
-        if (selectedItem.getmItemWebsite() == null){
+        //Website
+        if (selectedItem.getmItemWebsite().equals(Item.NO_WEBSITE_PROVIDED)) {
             attractionWebsite.setVisibility(View.GONE);
-        }else{attractionWebsite.setText(selectedItem.getmItemWebsite());}
-
-        if(selectedItem.getmItemAddress() == null){
-            attractionAddress.setVisibility(View.GONE);
-        }else{attractionAddress.setText(selectedItem.getmItemAddress());}
-
-        if(selectedItem.getmItemPhone() == null){
-            attractionPhone.setVisibility(View.GONE);
-        }else{attractionPhone.setText(selectedItem.getmItemPhone());}
+        } else {
+            attractionWebsite.setText(selectedItem.getmItemWebsite());
+        }
+        //Address
+        attractionAddress.setText(selectedItem.getmItemAddress());
+        //Phone number
+        attractionPhone.setText(selectedItem.getmItemPhone());
 
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
