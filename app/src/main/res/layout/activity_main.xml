@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_image_large"
+        android:gravity="center"
+        android:layout_margin="@dimen/padding_large"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        style="@style/AttractionCategoryStyle"
+        android:gravity="center"
+        android:text="@string/popular" />
+
+    <TextView
+        android:id="@+id/restaurants_text_view"
+        style="@style/AttractionCategoryStyle"
+        android:text="@string/restaurants" />
+
+    <TextView
+        android:id="@+id/entertainment_text_view"
+        style="@style/AttractionCategoryStyle"
+        android:text="@string/entertainment" />
+
+    <TextView
+        android:id="@+id/recreational_text_view"
+        style="@style/AttractionCategoryStyle"
+        android:text="@string/recreational" />
+
+    <TextView
+        android:id="@+id/educational_text_view"
+        style="@style/AttractionCategoryStyle"
+        android:text="@string/educational" />
+
+
+</LinearLayout>

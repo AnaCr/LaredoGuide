@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Laredo Tour Guide</string>
+
+    <!-- Attraction Category Menu -->
+    <string name="popular">Popular Attractions</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="recreational">Recreational</string>
+    <string name="educational">Educational</string>
+
+    <!-- Placeholder Strings -->
+    <string name="attraction_name">Attraction Name</string>
+    <string name="attraction_website">Attraction Website</string>
+    <string name="attraction_address">Attraction Address</string>
+    <string name="attraction_phone">Attraction Phone</string>
+    <string name="details">Details</string>
+
+
+</resources>

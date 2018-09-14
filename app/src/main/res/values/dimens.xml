@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- text sizes -->
+    <dimen name="textsize_large">24sp</dimen>
+    <dimen name="textsize_medium">20sp</dimen>
+    <dimen name="textsize_small">16sp</dimen>
+
+    <!-- padding and margin -->
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="margin_regular">8dp</dimen>
+
+    <!-- image sizes -->
+    <dimen name="size_image_small">100dp</dimen>
+    <dimen name="size_image_large">150dp</dimen>
+</resources>
