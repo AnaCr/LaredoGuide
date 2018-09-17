@@ -17,18 +17,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BrowseRestaurantsActivity"
-            android:label="@string/restaurants" />
-        <activity
-            android:name=".BrowseEntertainmentActivity"
-            android:label="@string/entertainment" />
-        <activity
-            android:name=".BrowseRecreationalActivity"
-            android:label="@string/recreational" />
-        <activity
-            android:name=".BrowseEducationalActivity"
-            android:label="@string/educational" />
-        <activity
             android:name=".DetailsActivity"
             android:label="@string/details"
             android:parentActivityName=".MainActivity" />

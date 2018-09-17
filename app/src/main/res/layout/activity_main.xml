@@ -8,38 +8,14 @@
     tools:context=".MainActivity"
     android:background="@color/white">
 
-    <ImageView
-        android:id="@+id/main_image_view"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/size_image_large"
-        android:gravity="center"
-        android:layout_margin="@dimen/padding_large"
-        android:src="@mipmap/ic_launcher" />
+        android:layout_height="wrap_content" />
 
-    <TextView
-        style="@style/AttractionCategoryStyle"
-        android:gravity="center"
-        android:text="@string/popular" />
-
-    <TextView
-        android:id="@+id/restaurants_text_view"
-        style="@style/AttractionCategoryStyle"
-        android:text="@string/restaurants" />
-
-    <TextView
-        android:id="@+id/entertainment_text_view"
-        style="@style/AttractionCategoryStyle"
-        android:text="@string/entertainment" />
-
-    <TextView
-        android:id="@+id/recreational_text_view"
-        style="@style/AttractionCategoryStyle"
-        android:text="@string/recreational" />
-
-    <TextView
-        android:id="@+id/educational_text_view"
-        style="@style/AttractionCategoryStyle"
-        android:text="@string/educational" />
-
+    <android.support.v4.view.ViewPager
+    android:id = "@+id/viewpager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 
 </LinearLayout>

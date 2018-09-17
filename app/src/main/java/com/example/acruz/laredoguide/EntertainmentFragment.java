@@ -1,23 +1,34 @@
 package com.example.acruz.laredoguide;
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class BrowseEntertainmentActivity extends AppCompatActivity {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class EntertainmentFragment extends Fragment {
 
     //Declare variables
     private ArrayList<Item> EntAttractions;
 
+    public EntertainmentFragment() {
+        // Required empty public constructor
+    }
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.browse_item_list);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.browse_item_list, container, false);
 
         EntAttractions = new ArrayList<Item>();
         EntAttractions.add(new Item("The Alamo Drafthouse",R.drawable.alamodrafthouse,
@@ -43,20 +54,24 @@ public class BrowseEntertainmentActivity extends AppCompatActivity {
                 "jettbowl.com","5823 McPherson Rd, Laredo, TX 78041",
                 "(956) 724-2695"));
 
-        ItemAdapter adapter = new ItemAdapter(this, EntAttractions);
+        ItemAdapter adapter = new ItemAdapter(getActivity(), EntAttractions);
 
-        ListView listView = findViewById(R.id.list);
+        ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
 
-                Intent detailsIntent = new Intent(BrowseEntertainmentActivity.this, DetailsActivity.class);
+                Intent detailsIntent = new Intent(getActivity(), DetailsActivity.class);
                 // Share the selected item with the Details Category
                 detailsIntent.putExtra("selectedItem", EntAttractions.get(i));
                 startActivity(detailsIntent);
             }
         });
+
+        return rootView;
+
     }
+
 }

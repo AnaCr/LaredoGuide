@@ -1,25 +1,36 @@
 package com.example.acruz.laredoguide;
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class BrowseEducationalActivity extends AppCompatActivity{
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class EducationalFragment extends Fragment {
 
     //Declare variables
     private ArrayList<Item> EduAttractions;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.browse_item_list);
+    public EducationalFragment() {
+        // Required empty public constructor
+    }
 
-        // TODO: List the educational attractions
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.browse_item_list, container, false);
+
         EduAttractions = new ArrayList<Item>();
         EduAttractions.add(new Item("The Republic of the Rio Grande Museum	",R.drawable.repriograndemuseum,
                 "webbheritage.org","1005 Zaragoza St, Laredo, TX 78040",
@@ -42,20 +53,24 @@ public class BrowseEducationalActivity extends AppCompatActivity{
                 "1 W End Washington St, Laredo, TX 78040 inside Laredo Community College",
                 "(956) 764-5701"));
 
-        ItemAdapter adapter = new ItemAdapter(this, EduAttractions);
+        ItemAdapter adapter = new ItemAdapter(getActivity(), EduAttractions);
 
-        ListView listView = findViewById(R.id.list);
+        ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
 
-                Intent detailsIntent = new Intent(BrowseEducationalActivity.this, DetailsActivity.class);
+                Intent detailsIntent = new Intent(getActivity(), DetailsActivity.class);
                 // Share the selected item with the Details Category
                 detailsIntent.putExtra("selectedItem", EduAttractions.get(i));
                 startActivity(detailsIntent);
             }
         });
+
+        return rootView;
+
     }
+
 }
