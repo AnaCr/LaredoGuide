@@ -6,7 +6,7 @@
     <string name="food">Food</string>
     <string name="fun">Fun</string>
     <string name="outdoor">Outdoor</string>
-    <string name="culture">Culture6</string>
+    <string name="culture">Culture </string>
 
     <!-- Placeholder Strings -->
     <string name="attraction_name">Attraction Name</string>
@@ -14,9 +14,5 @@
     <string name="attraction_address">Attraction Address</string>
     <string name="attraction_phone">Attraction Phone</string>
     <string name="details">Details</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
 </resources>
