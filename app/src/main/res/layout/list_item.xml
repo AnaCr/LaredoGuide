@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -17,7 +17,9 @@
             android:layout_width="@dimen/size_image_small"
             android:layout_height="@dimen/size_image_small"
             android:layout_weight="1"
-            android:src="@drawable/placeholder" />
+            android:src="@drawable/placeholder"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/item_name_text_view"

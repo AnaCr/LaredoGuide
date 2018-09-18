@@ -3,10 +3,10 @@
 
     <!-- Attraction Category Menu -->
     <string name="popular">Popular Attractions</string>
-    <string name="restaurants">Restaurants</string>
-    <string name="entertainment">Entertainment</string>
-    <string name="recreational">Recreational</string>
-    <string name="educational">Educational</string>
+    <string name="food">Food</string>
+    <string name="fun">Fun</string>
+    <string name="outdoor">Outdoor</string>
+    <string name="culture">Culture6</string>
 
     <!-- Placeholder Strings -->
     <string name="attraction_name">Attraction Name</string>
