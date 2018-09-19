@@ -23,7 +23,7 @@ public class DetailsActivity extends AppCompatActivity {
         TextView attractionPhone = findViewById(R.id.phone);
 
         //Get the selected Item
-        Item selectedItem = getIntent().getParcelableExtra("selectedItem");
+        Item selectedItem = getIntent().getParcelableExtra(getString(R.string.selected_item));
 
         // set the details for selected Item
         //Image

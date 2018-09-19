@@ -30,56 +30,66 @@ public class RestaurantsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.browse_item_list, container, false);
 
         // List the restaurants
-        Restaurants = new ArrayList<Item>();
-        Restaurants.add(new Item("Anise Kitchen + Market", R.drawable.anise,
-                "anisekitchen.com",
-                "3402 E Del Mar Blvd #220, Laredo, TX 78045",
-                "(956) 441-0606"));
-        Restaurants.add(new Item("Pino Burger", R.drawable.pino,
-                "4205 Jaime Zapata Memorial Hwy, Laredo, TX 78043",
-                "(956) 724-7466"));
-        Restaurants.add(new Item("	Border Foundry",R.drawable.borderfoundry,
-                "borderfoundrylaredo.com	",
-                "7718 McPherson Rd, Laredo, TX 78045	",
-                "(956) 724-5907"));
-        Restaurants.add(new Item("	Korean BBQ",R.drawable.koreanbbq,
-                "3910 E Del Mar Blvd #304, Laredo, TX 78045",
-                "	(956) 516-5003"));
-        Restaurants.add(new Item("	Pat's Kitchen",R.drawable.pats,
-                "pats50skitchen.com","5517 McPherson Rd #12, Laredo, TX 78041",
-                "(956) 753-7287"));
-        Restaurants.add(new Item("	Ka Café	",R.drawable.ka,"kacafelaredo.com",
-                "7510 McPherson Rd #106, Laredo, TX 78041","(956) 568-5640	"));
-        Restaurants.add(new Item("	Puerto Palenque	",R.drawable.puertopalenque,
-                "puertopalenque.com","7122 Bob Bullock Loop #20, Laredo, TX 78041",
-                "(956) 568-0851"));
-        Restaurants.add(new Item("	Mariscos El Pescador",R.drawable.elpescador,
-                "mariscoselpescador.com","3919 San Dario Ave, Laredo, TX 78041",
-                "(956) 724-8831"));
-        Restaurants.add(new Item("	Sushi Madre	",R.drawable.sushimadre,
-                "sushimadre.com","7124 Bob Bullock Loop, Laredo, TX 78041",
-                "(956) 722-7874"));
-        Restaurants.add(new Item("	La Laguna",R.drawable.lalaguna,
-                "lalagunamariscosandsushi.com",
-                "4205 Jaime Zapata Memorial Hwy #33, Laredo, TX 78043",
-                "(956) 568-1980"));
-        Restaurants.add(new Item("	Tacos Kissi",R.drawable.kissi,
-                "1705 E Del Mar Blvd, Laredo, TX 78041","(956) 795-1709"));
-        Restaurants.add(new Item("	La Churreria Sabor Mexico",R.drawable.lachurreria,
-                "7124 Bob Bullock Loop #106, Laredo, TX 78041",
-                "(956) 568-6680"));
-        Restaurants.add(new Item("	Flip Flop Coffee Shop",R.drawable.flipflop,
-                "flipflopcoffeeshop.com","3910 E Del Mar Blvd Ste 201, Laredo, TX 78045",
-                "(956) 267-8228"));
-        Restaurants.add(new Item("	Los Pinguinos Snacks",R.drawable.pinguinos,
-                "2201 S Jarvis Ave, Laredo, TX 78046	","(956) 441-0976	"));
-        Restaurants.add(new Item("	Fresh Snacks",R.drawable.fresh,
-                "9708 McPherson Rd suite 300, Laredo, TX 78045","(956) 602-0222"));
+        Restaurants = new ArrayList<>();
+        Restaurants.add(new Item(getString(R.string.anise), R.drawable.anise,
+                getString(R.string.anise_website),
+                getString(R.string.anise_address),
+                getString(R.string.anise_phone)));
+        Restaurants.add(new Item(getString(R.string.pino), R.drawable.pino,
+                getString(R.string.pino_address),
+                getString(R.string.pino_phone)));
+        Restaurants.add(new Item(getString(R.string.border_foundry),R.drawable.borderfoundry,
+                getString(R.string.border_foundry_website),
+                getString(R.string.border_foundry_address),
+                getString(R.string.border_foundry_phone)));
+        Restaurants.add(new Item(getString(R.string.korean_bbq),R.drawable.koreanbbq,
+                getString(R.string.korean_bbq_address),
+                getString(R.string.korean_bbq_phone)));
+        Restaurants.add(new Item(getString(R.string.pats),R.drawable.pats,
+                getString(R.string.pats_website),
+                getString(R.string.pats_address),
+                getString(R.string.pats_phone)));
+        Restaurants.add(new Item(getString(R.string.ka),R.drawable.ka,
+                getString(R.string.ka_website),
+                getString(R.string.ka_address),
+                getString(R.string.ka_phone)));
+        Restaurants.add(new Item(getString(R.string.puerto_palenque), R.drawable.puertopalenque,
+                getString(R.string.puerto_palenque_website),
+                getString(R.string.puerto_palenque_address),
+                getString(R.string.puerto_palenque_phone)));
+        Restaurants.add(new Item(getString(R.string.el_pescador),R.drawable.elpescador,
+                getString(R.string.el_pescador_website),
+                getString(R.string.el_pescador_address),
+                getString(R.string.el_pescador_phone)));
+        Restaurants.add(new Item(getString(R.string.sushi_madre),R.drawable.sushimadre,
+                getString(R.string.sushi_madre_website),
+                getString(R.string.sushi_madre_address),
+                getString(R.string.sushi_madre_phone)));
+        Restaurants.add(new Item(getString(R.string.la_laguna),R.drawable.lalaguna,
+                getString(R.string.la_laguna_website),
+                getString(R.string.la_laguna_address),
+                getString(R.string.la_laguna_phone)));
+        Restaurants.add(new Item(getString(R.string.kissi),R.drawable.kissi,
+                getString(R.string.kissi_address),
+                getString(R.string.kissi_phone)));
+        Restaurants.add(new Item(getString(R.string.churreria),R.drawable.lachurreria,
+                getString(R.string.churreria_address),
+                getString(R.string.churreria_phone)));
+        Restaurants.add(new Item(getString(R.string.flip_flop),R.drawable.flipflop,
+                getString(R.string.flip_flop_website),
+                getString(R.string.flip_flop_address),
+                getString(R.string.flip_flop_phone)));
+        Restaurants.add(new Item(getString(R.string.pinguinos),R.drawable.pinguinos,
+                getString(R.string.pinguinos_address),
+                getString(R.string.pinguinos_phone)));
+        Restaurants.add(new Item(getString(R.string.fresh_snacks),R.drawable.fresh,
+                getString(R.string.fresh_snacks_address),
+                getString(R.string.fresh_snacks_phone)));
 
 
         ItemAdapter adapter = new ItemAdapter(getActivity(), Restaurants);
 
-        ListView listView = (ListView) rootView.findViewById(R.id.list);
+        ListView listView =  rootView.findViewById(R.id.list);
 
         listView.setAdapter(adapter);
 
@@ -88,7 +98,7 @@ public class RestaurantsFragment extends Fragment {
 
                 Intent detailsIntent = new Intent(getActivity(), DetailsActivity.class);
                 // Share the selected item with the Details Category
-                detailsIntent.putExtra("selectedItem", Restaurants.get(i));
+                detailsIntent.putExtra(getString(R.string.selected_item), Restaurants.get(i));
                 startActivity(detailsIntent);
             }
         });

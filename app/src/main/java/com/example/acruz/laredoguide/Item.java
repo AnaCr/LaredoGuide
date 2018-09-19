@@ -24,7 +24,7 @@ public class Item implements Parcelable {
 
     // Item website
     private String mItemWebsite = NO_WEBSITE_PROVIDED;
-    static final String NO_WEBSITE_PROVIDED = "no website";
+    static final String NO_WEBSITE_PROVIDED = Integer.toString(R.string.no_website);
 
     //Item Address
     private String mItemAddress;

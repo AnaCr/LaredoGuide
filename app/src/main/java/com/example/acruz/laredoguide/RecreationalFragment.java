@@ -31,26 +31,26 @@ public class RecreationalFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.browse_item_list, container, false);
 
         RecAttractions = new ArrayList<Item>();
-        RecAttractions.add(new Item("Lake Casa Blanca International State Park",
+        RecAttractions.add(new Item(getString(R.string.lake_casa_blanca),
                 R.drawable.lakecasablanca,
-                "tpwd.texas.gov/state-parks/lake-casa-blanca	",
-                "5102 Bob Bullock Loop Laredo, TX 78041",
-                "(956) 725-3826"));
-        RecAttractions.add(new Item("Laredo Country Club",
+                getString(R.string.lake_casa_blanca_website),
+                getString(R.string.lake_casa_blanca_address),
+                getString(R.string.lake_casa_blanca_phone)));
+        RecAttractions.add(new Item(getString(R.string.country_club),
                 R.drawable.countryclub,
-                "laredocc.com",
-                "1415 Country Club Dr, Laredo, TX 78045",
-                "(956) 727-2900"));
-        RecAttractions.add(new Item("City of Laredo Parks & Leisure",
+                getString(R.string.country_club_website),
+                getString(R.string.country_club_address),
+                getString(R.string.country_club_phone)));
+        RecAttractions.add(new Item(getString(R.string.laredo_parks),
                 R.drawable.parksandleisure,
-                "cityoflaredo.com/PARKS",
-                "2201 Piedra China Laredo, Texas 78043",
-                "(956) 795-2350"));
-        RecAttractions.add(new Item("Arena Gun Club",
+                getString(R.string.laredo_parks_website),
+                getString(R.string.laredo_parks_address),
+                getString(R.string.laredo_parks_phone)));
+        RecAttractions.add(new Item(getString(R.string.arena_gun_club),
                 R.drawable.arenagunclub,
-                "arenagunclub.com",
-                "6501 Arena Blvd #106a, Laredo, TX 78041",
-                "(956) 723-1911"));
+                getString(R.string.arena_gun_club_website),
+                getString(R.string.arena_gun_club_address),
+                getString(R.string.arena_gun_club_phone)));
 
         ItemAdapter adapter = new ItemAdapter(getActivity(), RecAttractions);
 
@@ -63,7 +63,7 @@ public class RecreationalFragment extends Fragment {
 
                 Intent detailsIntent = new Intent(getActivity(), DetailsActivity.class);
                 // Share the selected item with the Details Category
-                detailsIntent.putExtra("selectedItem", RecAttractions.get(i));
+                detailsIntent.putExtra(getString(R.string.selected_item), RecAttractions.get(i));
                 startActivity(detailsIntent);
             }
         });
